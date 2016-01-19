@@ -12,7 +12,7 @@ case
 
 //////////////////
 
-2. DONE
+2.
 A GET request to the endpoint (for example '/notes') should return a list of names (corresponding to the file names).
 
 case
@@ -20,7 +20,7 @@ GET to /notes  >>>> get filennames in directory, and return json
 
 //////////////////
 
-3. DONE
+3.
 A GET request to a specific endpoint (for example '/notes/1') should return the contents of the that particular file as JSON.
 
 case
