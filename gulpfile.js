@@ -8,7 +8,8 @@ var jshint  = require('gulp-jshint');
 gulp.task('mocha', function() {
      return gulp.src(['test/*.js'], {read: false})
         .pipe(mocha({reporter: 'list'}))
-        .on('error', gutil.log);
+         //.on('error', handleError);
+         .on('error', gutil.log);
 });
 
 
@@ -20,11 +21,10 @@ gulp.task('lint', function() {
 
 
 gulp.task('watch-mocha', function() {
-     gulp.watch(['./**', 'test/**','!package.json'], ['lint','mocha']);
+     gulp.watch(['./*.js', 'test/**','!package.json'], ['lint','mocha']);
 });
 
 
 gulp.task('default', ['lint', 'mocha']);
 
 gulp.task('testing', ['lint', 'mocha', 'watch-mocha']);
-
